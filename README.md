@@ -15,7 +15,7 @@ Installed Docker
 
 ## Running project
 1) Docker build
-2) Docker build -t fproject
+2) docker run -p 5000:5000 fproject
 
 ## Development😣
 installed Flask; Using HTML,CSS,Python and Docker.
