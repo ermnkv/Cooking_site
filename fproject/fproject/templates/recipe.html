@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #8FBC8F;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .column {
+            flex-basis: 30%;
+            padding: 10px;
+        }
+        .column h2 {
+            color: darkgreen;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .column p {
+            color: darkgreen;
+            font-size: 16px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                flex-basis: 100%;
+            }
+        }
+        .about-dev img {
+            border-radius: 50%;
+            width: 30%;
+            float: right;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Recipes</h1>
+        <p>Website for those who like to cook fast.</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>ABOUT US</h2>
+            <p>Cooking is not just a skill or a hobby, it's a form of love. There is something truly special about the act of preparing a meal for someone. It's a way to express care, nourishment, and creativity all in one. Love for cooking is about more than just following a recipe; it's about infusing each dish with passion and personal touch. The process of selecting ingredients, experimenting with flavors, and creating something delicious becomes an expression of love towards oneself and those who will savor the creation. It's a way to connect with others, to create memories, and to spread joy through the simple act of sharing a meal. Love for cooking is a beautiful way to show love, and it holds the power to bring people together in the most delightful way.</p>
+        </div>
+        <div class="column about-dev">
+            <h2>ABOUT DEVELOPER</h2>
+            <img src="https://i.postimg.cc/3rCwVhZr/iam.jpg" alt="I am">
+            <p>I created this website so that people don't spend a lot of time cooking.</p>
+        </div>
+    </div>
+</body>
+</html>

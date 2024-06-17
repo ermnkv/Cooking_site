@@ -1,0 +1,71 @@
+<style>
+  h1 {
+    color: blueviolet;
+  }
+  p {
+    color: blueviolet;
+  }
+  body {
+    margin: 0;
+  }
+
+  .header {
+    padding: 100px;
+    text-align: left;
+    background: #dda0dd;
+    color: white;
+  }
+</style>
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-center">Log in now!</h1>
+        </div>
+        <div class="card-body">
+          {% with messages = get_flashed_messages() %} {% if messages %}
+          <div class="alert alert-danger">
+            <ul>
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %} {% endwith %}
+          <form method="post">
+            <div class="mb-3">
+              <label for="username" class="form-label">Your username:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Log in</button>
+              <a href="registration" type="submit" class="btn btn-primary">Create account now</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

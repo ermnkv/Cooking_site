@@ -1,0 +1,82 @@
+<style>
+  h1 {
+    color: blueviolet;
+  }
+  p {
+    color: blueviolet;
+  }
+  body {
+    margin: 0;
+  }
+
+  .header {
+    padding: 100px;
+    text-align: left;
+    background: #dda0dd;
+    color: white;
+  }
+</style>
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-center">Create account now!</h1>
+        </div>
+        <div class="card-body">
+          {% with messages = get_flashed_messages() %} {% if messages %}
+          <div class="alert alert-danger">
+            <ul>
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %} {% endwith %}
+          <form method="post">
+            <div class="mb-3">
+              <label for="username" class="form-label">Enter name please</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                placeholder="Enter name pls"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="form-label">Enter your password</label>
+              <input
+                type="text"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter new password"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Enter email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Create</button>
+              <a href="login" type="submit" class="btn btn-primary">Log in</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

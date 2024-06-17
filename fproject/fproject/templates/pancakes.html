@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<style>
+    h1{
+    color: chocolate;
+}
+
+p{
+    color: chocolate;
+}
+
+.headers{
+    padding: 100px;
+    text-align: left;
+    background:rgb(255, 208, 0);
+    color:white;
+}
+
+.fakeimg {
+    background-color:peru;
+    width: 100%;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.side {
+    background-color: #f1f1ff; 
+    padding: 20px;
+ }
+
+ .main {
+     flex: 70%;
+     background-color: white;
+     padding: 20px; 
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+
+ .imgfly {
+    height: 250px;
+    float:left;
+ }
+
+ @media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+</style>
+<head>
+    <title>Recipes</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="headers">
+    <h1>Pancakes</h1>
+    <p>Tasty and fast.</p>
+    </div>
+
+    <div class="row">
+        <div class="main">
+        <h2>RECIPE INGREDIENTS:</h2>
+        <h5>1. 1/3 cups (189g) all-purpose flour (preferably unbleached), scoop and level to measure</h5>
+        <h5>2. Tbsp (25g) granulated sugar</h5>
+        <h5>3. tsp baking powder</h5>
+        <h5>4. 1/4 tsp baking soda</h5>
+        <h5>5. 1/2 tsp salt</h5>
+        <h5>6. 1/3 cups whole milk</h5>
+        <h5>7. 3 Tbsp butter, melted (unsalted or salted is fine)</h5>
+        <h5>8. 1 large egg</h5>
+        <h5>9. 2 tsp plain vinegar or lemon juice</h5>
+        <h5>10. 1/2 tsp vanilla extract</h5>
+        <img src="../assets/pancakes.jpeg" class="imgfly">
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="main">
+        <h2>STEP 1</h2>
+        <img src="step1.jpg">
+        <div class="fakeimg" style="height: 200px;">In a large mixing bowl whisk together flour, 
+            sugar, baking powder, baking soda and salt for 20 seconds.
+            Make a well in center of flour mixture, set aside. In a separate medium 
+            mixing bowl or large liquid measuring cup whisk together milk, egg, butter, vinegar or lemon juice.
+            Pour milk mixture into well in flour mixture. Whisk just to blend, 
+            batter should be slightly lumpy. Let batter rest a few minutes to fluff up.</div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="main">
+        <h2>STEP 2</h2>
+        <img src="step2.jpg">
+        <div class="fakeimg" style="height: 200px;"> Preheat an electric griddle to 350 – 375 degrees depending on how hot your griddle gets.
+            Grease griddle (with non-stick cooking spray or a little butter – but be quick if using butter). 
+            Pour about 1,3 cup batter at a time onto griddle. 
+            Spread batter out slightly if thick (rounds should be about 4 1,3-inches).
+            Let cook until golden brown on bottom and bubbles appear on top surface, 
+            about 1 minute. Flip and cook opposite side until browned on bottom.</div>
+        </div>
+            </div>
+
+        <h2>STEP 3</h2>
+        <img src="step3.jpg">
+        <div class="fakeimg" style="height: 200px;">Serve warm with topping of choice.</div>
+</body>

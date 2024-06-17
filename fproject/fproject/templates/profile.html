@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="text-center">Hello, {{ user.username }}</h1>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="{{ url_for('static', filename='images/default.jpg') }}"
+              class="rounded-circle profile-photo"
+              alt="Profile photo"
+            />
+          </div>
+          <p>Your data:</p>
+          <form method="post">
+            <div class="mb-3">
+              <label for="username" class="form-label">Your name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                name="username"
+                value="{{ user.username }}"
+                required
+              />
+              <label for="email" class="form-label">Your email:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                name="email"
+                value="{{ user.email }}"
+                required
+              />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">account</button>
+            </div>
+          </form>
+
+          <div class="text-center">
+            <a href="logout">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
